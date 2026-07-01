@@ -5,14 +5,15 @@ export default function App() {
       <header className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <div className="flex items-baseline gap-2">
           <span className="text-lg font-semibold tracking-[-0.03em] text-ink">DRONA</span>
-          <span className="text-xs font-medium text-muted">by ApniPathshala</span>
+          <a
+            href="https://apnipathshala.org"
+            target="_blank"
+            rel="noreferrer"
+            className="text-xs font-medium text-muted transition-colors hover:text-brand-dark"
+          >
+            by ApniPathshala
+          </a>
         </div>
-        <a
-          href="#early-access"
-          className="hidden h-10 items-center rounded-lg bg-brand px-4 text-sm font-semibold text-white transition-colors hover:bg-brand-dark sm:inline-flex"
-        >
-          Get early access
-        </a>
       </header>
 
       {/* hero */}
@@ -24,8 +25,8 @@ export default function App() {
         />
 
         <section
-          id="early-access"
-          className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-24 pt-16 sm:pt-24 lg:grid-cols-[7fr_5fr] lg:gap-8"
+          id="top"
+          className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-24 pt-16 sm:pt-24 lg:grid-cols-[7fr_5fr] lg:gap-12"
         >
           {/* copy */}
           <div className="text-center lg:text-left">
@@ -38,36 +39,40 @@ export default function App() {
             </h1>
 
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-body lg:mx-0">
-              DRONA is the LMS powering ApniPathshala. It generates and manages
-              courses, reads submitted assessments to improve them, and turns each
-              submission into a weekly report on PMS / ApniPrerna.
+              DRONA is the learning engine behind{" "}
+              <a
+                href="https://apnipathshala.org"
+                target="_blank"
+                rel="noreferrer"
+                className="font-medium text-brand-dark underline decoration-brand-tint underline-offset-4 transition-colors hover:decoration-brand"
+              >
+                ApniPathshala
+              </a>
+              . It generates and manages courses, then studies every submitted
+              assessment to sharpen what gets taught next — revaluing work,
+              evolving the curriculum, and rolling each submission up into a weekly
+              report on PMS / ApniPrerna. One admin runs a curriculum that keeps
+              improving itself.
             </p>
 
-            <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
-              <a
-                href="#early-access"
-                className="inline-flex h-11 w-full items-center justify-center rounded-lg bg-brand px-6 text-sm font-semibold text-white transition-colors hover:bg-brand-dark sm:w-auto"
-              >
-                Get early access
-              </a>
+            <div className="mt-9 flex justify-center lg:justify-start">
               <a
                 href="#learn-more"
-                className="inline-flex h-11 w-full items-center justify-center rounded-lg border border-hairline bg-white px-6 text-sm font-semibold text-ink transition-colors hover:bg-cream sm:w-auto"
+                className="inline-flex h-11 items-center justify-center rounded-lg bg-brand px-6 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
               >
                 Learn more
               </a>
             </div>
           </div>
 
-          {/* product-mockup card: the demo video */}
-          <div className="rounded-2xl border border-hairline bg-white p-2 shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
+          {/* product-mockup card: the demo video (portrait, click-to-play with sound) */}
+          <div className="mx-auto w-full max-w-[300px] rounded-2xl border border-hairline bg-white p-2 shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
             <video
-              className="aspect-video w-full rounded-xl bg-cream object-cover"
+              className="aspect-[9/16] w-full rounded-xl bg-cream object-cover"
               src="/drona-demo.mp4"
-              autoPlay
-              muted
-              loop
+              controls
               playsInline
+              preload="metadata"
               aria-label="DRONA product demo"
             />
           </div>
