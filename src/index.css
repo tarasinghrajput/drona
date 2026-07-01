@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* ApniPathshala brand palette (sampled from apnipathshala.org) on Cal.com's
+   clean white-canvas system. Orange carries the CTA voltage; ink stays near-black. */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-brand: #ff7315;
+  --color-brand-dark: #e67400;
+  --color-brand-light: #fc9948;
+  --color-brand-tint: #ffd9b3;
+  --color-cream: #fff8f4;
+  --color-cream-2: #ffe9d3;
+  --color-accent-blue: #006dff;
+
+  --color-ink: #111111;
+  --color-body: #374151;
+  --color-muted: #6b7280;
+  --color-hairline: #e5e7eb;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  margin: 0;
+}
